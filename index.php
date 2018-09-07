@@ -14,7 +14,8 @@ require 'helper/Progress.php';
 
     <link type="text/css" rel="stylesheet" href="css/MainStyle.css?newversion">
 
-    <script src="JS/MainJs.JS?newversion" type="text/javascript"></script>
+    <script src="JS/MainJs.js?newversion" type="text/javascript"></script>
+
 </head>
 
 
@@ -69,7 +70,8 @@ require 'helper/Progress.php';
 
     <div class="card parent" id="parentCard">
 
-        <script>includePages('Home.html')</script>
+        <script>includePages('Home.php')</script>
+
     </div>
 
 </div>

@@ -1,0 +1,58 @@
+/** {
+    margin: 0;
+    padding: 0;
+    height: 0;
+    width: 0;
+}*/
+
+body {
+
+    background: transparent;
+}
+
+.root {
+
+    width: 100vw;
+    height: auto;
+}
+
+.img-root {
+
+    position: fixed;
+    filter: blur(2px);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    cursor: pointer;
+
+}
+
+.small-img {
+    width: 140px;
+    height: 140px;
+}
+
+
+
+.carousel-img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 35vw;
+    width: 100%;
+}
+
+.nav-parent{
+    margin: 64px 64px 0;
+}
+
+.parent {
+    direction: rtl;
+    margin: 16px 64px 64px;
+    width: auto;
+    height: 100%;
+
+}

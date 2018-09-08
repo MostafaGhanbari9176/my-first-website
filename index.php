@@ -1,5 +1,6 @@
 <?php
 require 'helper/Progress.php';
+require 'helper/StData.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,14 +8,16 @@ require 'helper/Progress.php';
     <title>Title</title>
 
     <meta charset="utf-8">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="stylesheet" href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="css/MainStyle.css?newversion">
 
     <script src="JS/MainJs.js?newversion" type="text/javascript"></script>
+    <script src="JS/HomeJS.js?newversion" type="text/javascript"></script>
+    <script src="JS/jquery-3.3.1.slim.min.js" ></script>
+    <script src="JS/jquery-3.3.1.min.js" ></script>
+
 
 </head>
 
@@ -42,7 +45,7 @@ require 'helper/Progress.php';
                 </form>
                 <ul class="navbar-nav ">
                     <li class="nav-item font-weight-bold">
-                        <a class="nav-link " onclick="includePages('Call.html')">ارتباط با من</a>
+                        <a class="nav-link " onclick="includePages('Call.html')" href="#">ارتباط با من</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -57,10 +60,10 @@ require 'helper/Progress.php';
                         </div>
                     </li>
                     <li class="nav-item font-weight-bold">
-                        <a class="nav-link" onclick="includePages('Abou.html')">درباره من</a>
+                        <a class="nav-link" onclick="includePages('About.html')" href="#">درباره من</a>
                     </li>
                     <li class="nav-item active font-weight-bold">
-                        <a class="nav-link" onclick="includePages('Home.html')">خانه <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" onclick="getDownloadObjectHome('<?php echo StData::$baseUrl; ?>')" href="#">خانه <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
 
@@ -70,18 +73,14 @@ require 'helper/Progress.php';
 
     <div class="card parent" id="parentCard">
 
-        <script>includePages('Home.php')</script>
+        <script>getDownloadObjectHome('<?php echo StData::$baseUrl; ?>')</script>
 
     </div>
 
 </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
+
+
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>

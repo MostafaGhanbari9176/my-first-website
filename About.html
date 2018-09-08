@@ -1,1 +1,77 @@
-<h1>ABOUT</h1>
+
+<style>
+    .animation {
+        margin: 128px;
+        width: auto;
+        height: auto;
+        align-self: center;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: nowrap;
+    }
+
+    .animObject {
+        margin: 2px;
+        width: 4vw;
+        height: 4vw;
+        background-color: currentColor;
+        opacity: 0.4;
+        animation: opacity 1.6s infinite;
+    }
+
+    .objectOneInProgress {
+        animation-delay: -1.6s;
+    }
+
+    .objectTwoInProgress {
+        animation-delay: -1.2s;
+    }
+
+    .objectThreeInProgress {
+        animation-delay: -0.8s;
+    }
+
+    .objectFourInProgress {
+        animation-delay: -0.4s;
+    }
+
+    @keyframes opacity {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0.4;
+        }
+    }
+
+    @-webkit-keyframes opacity {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0.4;
+        }
+    }
+
+</style>
+<div class="animation">
+    <table>
+        <tr>
+            <td>
+                <div class='objectOneInProgress animObject rounded-circle'></div>
+            </td>
+            <td>
+                <div class='objectFourInProgress animObject rounded-circle'></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class='objectTwoInProgress animObject rounded-circle'></div>
+            </td>
+            <td>
+                <div class='objectThreeInProgress animObject rounded-circle'></div>
+            </td>
+        </tr>
+
+    </table>
+</div>

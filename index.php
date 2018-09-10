@@ -5,8 +5,8 @@ require 'helper/StData.php';
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Title</title>
-
+    <title>PePoTec</title>
+    <link href="helper/img/logo.png" rel="shortcut icon">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -17,6 +17,7 @@ require 'helper/StData.php';
     <script src="JS/HomeJS.js?newversion" type="text/javascript"></script>
     <script src="JS/jquery-3.3.1.slim.min.js" ></script>
     <script src="JS/jquery-3.3.1.min.js" ></script>
+    <script src="JS/popper.min.js" ></script>
 
 
 </head>
@@ -26,10 +27,9 @@ require 'helper/StData.php';
 
 
 <div class="root">
-    <img class="img-root" src="helper/img/5.jpg">
+   <!-- <img class="img-root" src="helper/img/5.jpg">-->
 
-    <div class="card nav-parent">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
             <a class="font-weight-bold btn border-danger rounded ">PePoTec</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,9 +69,9 @@ require 'helper/StData.php';
 
             </div>
         </nav>
-    </div>
 
-    <div class="card parent" id="parentCard">
+
+    <div class="parent" id="parentCard">
 
         <script>getDownloadObjectHome('<?php echo StData::$baseUrl; ?>')</script>
 
@@ -81,7 +81,7 @@ require 'helper/StData.php';
 
 
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+<script src="vendor/twbs/bootstrap/dist/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 

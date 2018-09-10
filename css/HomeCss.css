@@ -1,10 +1,48 @@
+.subject {
+    font-weight: bold;
+    font-family: inherit;
+    width: auto;
+    background: rgba(0, 123, 255, 0.13);
+    color: black;
+    border-right: 4px solid #007bff;
+    border-radius: 5px;
+    text-align: right;
+    padding: 16px;
+    font-size: 3vw;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.sliderItem {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+
 .small-img {
     width: 12vw;
     height: 12vw;
-
 }
 
-.subject{
+.itemSubject {
+    font-weight: bold;
+    font-family: inherit;
+    font-size: 1.9vw;
+    color: black;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.description-small {
+
+    font-size: 1.1vw;
+    color: #363636;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.description-big {
 
     font-size: 2.1vw;
     color: black;
@@ -12,56 +50,58 @@
     margin-bottom: 16px;
 }
 
-.description-small{
-
+.btnDownload {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: grayscale(100%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     font-size: 1.3vw;
-    color: gray;
-    margin-top: 16px;
+    width: 10vw;
     margin-bottom: 16px;
-}
-
-.description-big{
-
-    font-size: 2.1vw;
-    color: black;
-    margin-top: 16px;
-    margin-bottom: 16px;
-}
-
-.btnDownload{
-    filter:grayscale(100%);
-    box-shadow :0 0 20px rgba(0,0,0,0.3) ;
-    font-size: 1.3vw;
-    width: 8vw;
-    margin-bottom: 32px;
+    transition-duration: .3s;
 
 }
 
-.btnDownload:hover{
-    filter:grayscale(0%);
-    box-shadow :0 10px 40px rgba(0,0,0,0.7) ;
+.btnDownload:hover {
+    filter: grayscale(0%);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
 }
 
-.downloadObjectParent{
-    flex: auto;
-    width: 25vw;
+.downloadObjectParent {
+    position: relative;
     min-height: 28vw;
     border-radius: 5px;
-    margin-top: 32px;
-    margin-right: 8px;
-    margin-left: 8px;
-    padding-top: 32px;
-    padding-bottom: 80px;
-    filter:grayscale(100%);
-    box-shadow :0 0 20px rgba(0,0,0,0.3) ;
+    padding: 32px 16px 64px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    height: 100%;
+    border-top: 4px solid #007bff;
+    border-bottom: 4px solid #dc3545;
+    transition-duration: 1s;
 
 }
 
-.downloadObjectParent:hover{
-    filter:grayscale(0%);
-    background-color: rgba(240,248,255,0.3);
-    box-shadow :0 10px 40px rgba(0,0,0,0.7) ;
+.downloadObjectParent:hover {
+    border-top: 4px solid #dc3545;
+    border-bottom: 4px solid #007bff;
+}
 
+.homeItems {
+    padding: 64px;
+    border-top: 4px solid #28a745;
+    z-index: 4;
+    position: relative;
+    top: 420px;
+    background: #fffbfb;
 
+}
+
+.homeSlider {
+    position: fixed;
+}
+
+.downloadObjectMenu {
 
 }

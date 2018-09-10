@@ -1,9 +1,12 @@
-
 function setErrorImage() {
-    $("img").error(function () {
-        $(this).attr('src', 'helper/img/404.png');
-    });
+
+/*   let imgElements = document.getElementsByTagName('img');
+    for(let i=0;i<imgElements.length ;i++){
+        imgElements[i].;
+    }*/
+
 }
+
 function includePages(pageAddress, data) {
     const includeDestination = document.getElementById('parentCard');
     includeDestination.innerHTML = getProgress();
@@ -11,7 +14,7 @@ function includePages(pageAddress, data) {
         type: 'POST',
         url: pageAddress,
 
-        data:(data),
+        data: (data),
         success: function (data) {
             $("#parentCard").html(data);
             setErrorImage();
@@ -36,6 +39,9 @@ function getProgress() {
         "        justify-content: space-between;\n" +
         "        align-items: stretch;\n" +
         "        flex-wrap: nowrap;\n" +
+        "    }\n" +
+        "    table {\n" +
+        "        margin: auto;\n" +
         "    }\n" +
         "\n" +
         "    .animObject {\n" +
@@ -106,7 +112,7 @@ function getProgress() {
 }
 
 function getPageNF() {
-    return"\n" +
+    return "\n" +
         "        <style>\n" +
         "            .pageNotFound{\n" +
         "                margin:64px;\n" +

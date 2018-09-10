@@ -5,14 +5,23 @@
     width: 0;
 }*/
 
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('/helper/font/dirooz-font-v0.2.1/Dirooz.eot'); /* IE9 Compat Modes */
+    src: url('/helper/font/dirooz-font-v0.2.1/Dirooz.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/helper/font/dirooz-font-v0.2.1/Dirooz.woff') format('woff'), /* Modern Browsers */
+    url('/helper/font/dirooz-font-v0.2.1/Dirooz.ttf')  format('truetype') /* Safari, Android, iOS */
+    /*url('/helper/font/dirooz-font-v0.2.1/Dirooz.svg#svgFontName') format('svg'); */
+}
+
 body {
 
     background: transparent;
 }
 
 .root {
-
-    width: 100vw;
+    z-index: 1;
+    width: auto;
     height: auto;
 }
 
@@ -26,7 +35,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: -1;
+    z-index: 2;
     cursor: pointer;
 
 }
@@ -43,8 +52,9 @@ body {
 }
 
 .parent {
+    z-index: 3;             /*////////////////!****************** Parent Z Index = 3 ******************!////////////////////*/
     direction: rtl;
-    margin: 16px 64px 64px;
+    margin: 53px 0 64px;
     width: auto;
     height: 100%;
 

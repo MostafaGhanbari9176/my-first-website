@@ -1,3 +1,16 @@
+.parent {
+    direction: rtl;
+    margin: 53px 0 0;
+    width: auto;
+    height: 100%;
+
+}
+
+.root {
+    width: auto;
+    height: auto;
+}
+
 /** {
     margin: 0;
     padding: 0;
@@ -19,12 +32,6 @@ body {
     background: transparent;
 }
 
-.root {
-    z-index: 1;
-    width: auto;
-    height: auto;
-}
-
 .img-root {
 
     position: fixed;
@@ -40,22 +47,7 @@ body {
 
 }
 
-.carousel-img {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    height: 35vw;
-    width: 100%;
-}
-
 .nav-parent{
     margin: 64px 64px 0;
 }
 
-.parent {
-    z-index: 3;             /*////////////////!****************** Parent Z Index = 3 ******************!////////////////////*/
-    direction: rtl;
-    margin: 53px 0 64px;
-    width: auto;
-    height: 100%;
-
-}

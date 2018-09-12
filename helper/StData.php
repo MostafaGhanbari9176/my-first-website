@@ -9,7 +9,7 @@
 class StData
 {
 
-    public static $baseUrl = 'http://192.168.1.101:8080/PePoTecApi/v1/';
+    public static $baseUrl = 'http://192.168.1.102:8080/PePoTecApi/v1/';
     public static $img = 'helper/img/';
 
 }

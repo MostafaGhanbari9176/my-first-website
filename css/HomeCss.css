@@ -1,3 +1,40 @@
+.homeItems {
+    padding: 64px;
+    border-top: 4px solid #007bff;
+    position: relative;
+    top: 35vw;
+    background: #f8f9fa;
+    margin-bottom: 35vw;
+
+}
+
+.homeSlider {
+     z-index: -1;
+    position: fixed;
+
+}
+
+.menuItems {
+
+}
+
+.menuChild {
+    font-size: 1.3vw;
+
+}
+
+.carousel-img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 35vw;
+    width: 100%;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
 .subject {
     font-weight: bold;
     font-family: inherit;
@@ -11,21 +48,13 @@
     font-size: 3vw;
 }
 
-.row {
-    margin-right: 0;
-    margin-left: 0;
-}
-
-.sliderItem {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-}
-
 .small-img {
     width: 12vw;
     height: 12vw;
 }
 
-.itemSubject {
+.downloadItemSubject {
+    text-align: center;
     font-weight: bold;
     font-family: inherit;
     font-size: 1.9vw;
@@ -34,20 +63,41 @@
     margin-bottom: 16px;
 }
 
-.description-small {
-
-    font-size: 1.1vw;
-    color: #363636;
-    margin-top: 16px;
-    margin-bottom: 16px;
-}
-
-.description-big {
-
-    font-size: 2.1vw;
+.visitItemSubject {
+    text-align: right;
+    font-weight: bold;
+    font-family: inherit;
+    font-size: 1.9vw;
     color: black;
     margin-top: 16px;
     margin-bottom: 16px;
+    background: rgba(0, 123, 255, 0.13);
+    border-radius: 25px;
+    width: fit-content;
+    padding: .6vw;
+}
+
+.downloadItemDescription {
+
+    font-size: 1.4vw;
+    color: black;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+
+.visitItemDescription {
+    text-align: right;
+    font-weight: 500;
+    font-size: 1.5vw;
+    color: black;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background-color: #ffebaf;
+    border-radius: .6vw;
+    width: fit-content;
+    padding: .6vw;
+
 }
 
 .btnDownload {
@@ -69,6 +119,10 @@
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
 }
 
+.visitObjectSection {
+    margin-top: 64px;
+}
+
 .downloadObjectParent {
     position: relative;
     min-height: 28vw;
@@ -88,20 +142,9 @@
     border-bottom: 4px solid #007bff;
 }
 
-.homeItems {
-    padding: 64px;
-    border-top: 4px solid #28a745;
-    z-index: 4;
-    position: relative;
-    top: 420px;
-    background: #fffbfb;
-
+.sliderItem {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 }
 
-.homeSlider {
-    position: fixed;
-}
 
-.downloadObjectMenu {
 
-}

@@ -66,7 +66,7 @@ require 'helper/StData.php';
                     <a class="nav-link" onclick="includePages('About.html')" href="#">درباره من</a>
                 </li>
                 <li class="nav-item active font-weight-bold">
-                    <a class="nav-link" onclick="getDownloadObjectHome('<?php echo StData::$baseUrl; ?>')" href="#">خانه
+                    <a class="nav-link" onclick="getDownloadObjectHome('<?php echo StData::$baseUrl; ?>',true)" href="#">خانه
                         <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
@@ -77,12 +77,12 @@ require 'helper/StData.php';
     <div class="parent" id="parentCard">
 
         <!--<div style="background: rebeccapurple; height: 1000px"></div>-->
-        <script>getDownloadObjectHome('<?php echo StData::$baseUrl; ?>')</script>
+        <script>getDownloadObjectHome('<?php echo StData::$baseUrl; ?>',true)</script>
 
     </div>
 
     <!-- Footer -->
-    <footer class="page-footer font-small blue-grey lighten-5" style="background: #f8f9fa">
+    <footer class="page-footer font-small blue-grey lighten-5" style="background: #f8f9fa ; direction: rtl">
 
         <div style="background-color: #007bff;">
             <div class="container">
@@ -91,14 +91,17 @@ require 'helper/StData.php';
                 <div class="row py-4 d-flex align-items-center">
 
                     <!-- Grid column -->
-                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-                        <h6 class="mb-0">Get connected with us on social networks!</h6>
+                    <div class="col-md-6 col-lg-5 text-center text-md-right mb-4 mb-md-0">
+                        <h6 class="mb-0">به ما در شبکه های اجتماعی ملحق شوید !</h6>
                     </div>
                     <!-- Grid column -->
 
                     <!-- Grid column -->
-                    <div class="col-md-6 col-lg-7 text-center text-md-right">
+                    <div class="col-md-6 col-lg-7 text-center text-md-left">
 
+                        <a class="ins-ic">
+                            <i class="fa fa-instagram white-text"> </i>
+                        </a>
                         <!-- Facebook -->
                         <a class="fb-ic">
                             <i class="fa fa-facebook white-text mr-4"> </i>
@@ -116,9 +119,7 @@ require 'helper/StData.php';
                             <i class="fa fa-linkedin white-text mr-4"> </i>
                         </a>
                         <!--Instagram-->
-                        <a class="ins-ic">
-                            <i class="fa fa-instagram white-text"> </i>
-                        </a>
+
 
                     </div>
                     <!-- Grid column -->
@@ -136,75 +137,75 @@ require 'helper/StData.php';
             <div class="row mt-3 dark-grey-text">
 
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
-
-                    <!-- Content -->
-                    <h6 class="text-uppercase font-weight-bold">Company name</h6>
-                    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit.</p>
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 text-right">
 
                     <!-- Links -->
-                    <h6 class="text-uppercase font-weight-bold">Products</h6>
+                    <h6 class="text-uppercase font-weight-bold ">مطالب سایت</h6>
                     <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                     <p>
-                        <a class="dark-grey-text" href="#!">MDBootstrap</a>
+                        <a class="dark-grey-text" href="#!">موسیقی</a>
                     </p>
                     <p>
-                        <a class="dark-grey-text" href="#!">MDWordPress</a>
+                        <a class="dark-grey-text" href="#!">اندروید</a>
                     </p>
                     <p>
-                        <a class="dark-grey-text" href="#!">BrandFlow</a>
+                        <a class="dark-grey-text" href="#!">بازی های کامپیوتری</a>
                     </p>
-                    <p>
+<!--                    <p>
                         <a class="dark-grey-text" href="#!">Bootstrap Angular</a>
+                    </p>-->
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-right">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">لینک های مرتبط</h6>
+                    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a class="dark-grey-text" href="#!">خانه</a>
+                    </p>
+                    <p>
+                        <a class="dark-grey-text" href="#!">درباره ما</a>
+                    </p>
+                    <p>
+                        <a class="dark-grey-text" href="#!">بازی</a>
+                    </p>
+                    <p>
+                        <a class="dark-grey-text" href="#!">راهنما</a>
                     </p>
 
                 </div>
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-right">
 
                     <!-- Links -->
-                    <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+                    <h6 class="text-uppercase font-weight-bold">ارتباط یا ما</h6>
                     <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                     <p>
-                        <a class="dark-grey-text" href="#!">Your Account</a>
-                    </p>
+                        <i class="fa fa-home mr-3"></i>زاهدان - سیستان و بلوچستان</p>
                     <p>
-                        <a class="dark-grey-text" href="#!">Become an Affiliate</a>
-                    </p>
-                    <p>
-                        <a class="dark-grey-text" href="#!">Shipping Rates</a>
-                    </p>
-                    <p>
-                        <a class="dark-grey-text" href="#!">Help</a>
-                    </p>
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
-                    <!-- Links -->
-                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
-                    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>
-                        <i class="fa fa-home mr-3"></i> New York, NY 10012, US</p>
-                    <p>
-                        <i class="fa fa-envelope mr-3"></i> info@example.com</p>
+                        <i class="fa fa-envelope mr-3"></i>godhelot1@gmail.com</p>
                     <p>
                         <i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
                     <p>
                         <i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+
+                    <!-- Content -->
+                    <h6 class="text-uppercase font-weight-bold">PePoTec</h6>
+                    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit.</p>
 
                 </div>
                 <!-- Grid column -->
@@ -216,8 +217,8 @@ require 'helper/StData.php';
         <!-- Footer Links -->
 
         <!-- Copyright -->
-        <div class="footer-copyright text-center text-black-50 py-3">© 2018 Copyright:
-            <a class="dark-grey-text" href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
+        <div class="footer-copyright text-center text-black-50 py-3">
+            کپی رایت © 2018 تمامی حقوق این وبسایت متعلق به شرکت PePoTec و مدیر سایت می باشد.
         </div>
         <!-- Copyright -->
 

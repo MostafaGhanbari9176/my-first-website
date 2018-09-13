@@ -48,7 +48,7 @@ function getProgress() {
         "        margin: 2px;\n" +
         "        width: 4vw;\n" +
         "        height: 4vw;\n" +
-        "        background-color: currentColor;\n" +
+        "        background-color: var(--primaryColor);\n" +
         "        opacity: 0.4;\n" +
         "        animation: opacity 1.6s infinite;\n" +
         "    }\n" +

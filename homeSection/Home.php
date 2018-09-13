@@ -24,7 +24,7 @@ function getGroupColor()
 $saveColor = null;
 $saveColor2 = null;
 
-require 'helper/StData.php';
+require '../helper/StData.php';
 ?>
 
 
@@ -91,9 +91,15 @@ require 'helper/StData.php';
         <form>
             <table>
                 <tr>
+
+                <tr>
+                    <td>
+                        <button id="showAllDownloadObjectButton" type="button" class="btn btn-outline-dark" style="border-radius: 0; display: none" onclick="getDownloadObjectHome('<?php echo StData::$baseUrl?>',false)" >نمایش همه</button>
+                    </td>
+                </tr>
                     <?php
                     if ($groupingObject[0]['empty'] == 1) {
-                        echo "<h1 style='color:tomato'>EMPTY</h1>";
+                        echo "<h1 class='EmptyMessage'>EMPTY</h1>";
                     } else {
                         for ($k = 0; $k < sizeof($groupingObject); $k++) {
                             if ($groupingObject[$k]['root_id'] == -1) {
@@ -109,7 +115,7 @@ require 'helper/StData.php';
                                    $saveColor = $color;
                                 echo "                    <td>
                         <div class=\"btn-group menuItems\">
-                            <button type=\"button\" class=\"btn " . $color . " menuChild\">" . $groupingObject[$k]['subject'] . "</button>
+                            <button type=\"button\" onclick=\"getDownloadObjectByRootIdGrouping('". StData::$baseUrl ."','". $groupingObject[$k]['g_id'] ."')\" class=\"btn " . $color . " menuChild\">" . $groupingObject[$k]['subject'] . "</button>
                             <button type=\"button\"
                                     class=\"btn " . $color . " dropdown-toggle dropdown-toggle-split menuChild\"
                                     data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
@@ -122,7 +128,7 @@ require 'helper/StData.php';
                                     if ($groupingObject[$m]['root_id'] == $groupingObject[$k]['g_id'])
                                         echo "
 
-                                <a class=\"dropdown-item\" href=\"#\">". $groupingObject[$m]['subject'] ."</a>
+                                <a class=\"dropdown-item\" onclick=\"getDownloadObjectByGroupingId('". StData::$baseUrl ."','". $groupingObject[$m]['g_id'] ."')\">". $groupingObject[$m]['subject'] ."</a>
                                 <div class=\"dropdown-divider\"></div>
                                ";
                                 }
@@ -143,9 +149,9 @@ require 'helper/StData.php';
 
 
     <!-- Three columns of text below the carousel -->
-    <div class="row" style="text-align: center" id="downloadObjectRow">
+    <div class="row" style="text-align: center" id="downloadObjectSection">
         <?php if ($downloadObject[0]['empty'] == 1)
-            echo "<h1 style='color:tomato'>EMPTY</h1>";
+            echo "<h1 class='EmptyMessage'>". StData::$emptyMessage ."</h1>";
         else {
             for ($i = 0; $i < sizeof($downloadObject); $i++) {
                 echo "
@@ -175,13 +181,19 @@ require 'helper/StData.php';
         <hr class="featurette-divider" style="margin-bottom: 32px">
 
         <h1 class="subject"> تاپ لرن </h1>
-        <div class="">
+        <div class="" style="margin-bottom: 64px">
             <form>
                 <table>
+
+                    <tr>
+                        <td>
+                            <button id="showAllVisitObjectButton" type="button" class="btn btn-outline-dark" style="border-radius: 0; display: none" onclick="getVisitObjectHome(null,'<?php echo StData::$baseUrl?>',null,false)">نمایش همه </button>
+                        </td>
+                    </tr>
                     <tr>
                         <?php
                         if ($groupingObject[0]['empty'] == 1) {
-                            echo "<h1 style='color:tomato'>EMPTY</h1>";
+                            echo "<h1 class='EmptyMessage'>EMPTY</h1>";
                         } else {
                             for ($k = 0; $k < sizeof($groupingObject); $k++) {
                                 if ($groupingObject[$k]['root_id'] == -1) {
@@ -197,7 +209,7 @@ require 'helper/StData.php';
                                         $saveColor2 = $color;
                                     echo "                    <td>
                         <div class=\"btn-group menuItems\">
-                            <button type=\"button\" class=\"btn " . $color . " menuChild\">" . $groupingObject[$k]['subject'] . "</button>
+                            <button type=\"button\" onclick=\" getVisitObjectByRootIdGrouping('". StData::$baseUrl ."','". $groupingObject[$k]['g_id'] ."') \" class=\"btn " . $color . " menuChild\">" . $groupingObject[$k]['subject'] . "</button>
                             <button type=\"button\"
                                     class=\"btn " . $color . " dropdown-toggle dropdown-toggle-split menuChild\"
                                     data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
@@ -210,7 +222,7 @@ require 'helper/StData.php';
                                         if ($groupingObject[$m]['root_id'] == $groupingObject[$k]['g_id'])
                                             echo "
 
-                                <a class=\"dropdown-item\" href=\"#\">". $groupingObject[$m]['subject'] ."</a>
+                                <a class=\"dropdown-item\" onclick=\" getVisitObjectByGroupingId('". StData::$baseUrl ."','". $groupingObject[$m]['g_id'] ."') \">". $groupingObject[$m]['subject'] ."</a>
                                 <div class=\"dropdown-divider\"></div>
                                ";
                                     }
@@ -229,11 +241,11 @@ require 'helper/StData.php';
             </form>
         </div>
 
-
+        <div id="visitObjectSection">
         <?php
 
         if ($visitObjects[0]['empty'] == 1)
-            echo "<h1 style='color:tomato'>EMPTY</h1>";
+            echo "<h1 class='EmptyMessage'>" . StData::$emptyMessage . "</h1>";
         else {
 
             for ($j = 0; $j < sizeof($visitObjects); $j++) {
@@ -256,6 +268,7 @@ require 'helper/StData.php';
         }
 
         ?>
+        </div>
         <!-- /END THE FEATURETTES -->
     </div>
 </div>

@@ -46,18 +46,31 @@
     text-align: right;
     padding: 16px;
     font-size: 3vw;
+    transition-duration: .7s;
+    animation-name: changeSubjectSize;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+}
+.subject:hover{
+    background: rgba(220, 53, 69, 0.13);
+    border-right: 4px solid #dc3545;
 }
 
 .small-img {
     width: 12vw;
     height: 12vw;
 }
+@keyframes changeSubjectSize {
+    0%{margin-left: 10px}
+    100%{margin-left: 30px}
+}
 
 .downloadItemSubject {
     text-align: center;
     font-weight: bold;
     font-family: inherit;
-    font-size: 1.9vw;
+    font-size: 1.5vw;
     color: black;
     margin-top: 16px;
     margin-bottom: 16px;
@@ -79,7 +92,7 @@
 
 .downloadItemDescription {
 
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     color: black;
     margin-top: 16px;
     margin-bottom: 16px;
@@ -97,6 +110,7 @@
     border-radius: .6vw;
     width: fit-content;
     padding: .6vw;
+    transition-duration: .7s;
 
 }
 

@@ -1,3 +1,6 @@
+:root{
+    --primaryColor : #007bff;
+}
 .parent {
     direction: rtl;
     margin: 53px 0 0;
@@ -9,6 +12,13 @@
 .root {
     width: auto;
     height: auto;
+}
+
+.EmptyMessage{
+    font-size: 3vw;
+    color: tomato;
+    margin: 64px auto;
+    text-align: center;
 }
 
 /** {

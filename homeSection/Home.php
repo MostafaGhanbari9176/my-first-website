@@ -25,6 +25,7 @@ $saveColor = null;
 $saveColor2 = null;
 
 require '../helper/StData.php';
+require '../helper/StViews.php';
 ?>
 
 
@@ -41,11 +42,7 @@ require '../helper/StData.php';
             <img class="first-slide carousel-img" src="helper/img/22.jpg" alt="First slide">
             <div class="container">
                 <div class="carousel-caption text-right">
-                    <h1 class="downloadItemSubject">نسخه آزمایشی.</h1>
-                    <p class="description-small">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id
-                        elit non mi porta gravida
-                        at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p><a class="btn btn-primary btnDownload" href="#" role="button">Sign up today</a></p>
+                    <h1 class="visitItemSubject sliderText">نسخه آزمایشی.</h1>
                 </div>
             </div>
         </div>
@@ -83,7 +80,7 @@ require '../helper/StData.php';
 </div>
 
 <div class=" marketing homeItems">
-
+<div id = "arrowsDownHome" style="padding: 0 32px 32px;" onclick="slideDown()"><?php StViews::getArrowsDown(); ?></div>
     <h1 class="subject"> تاپ دان </h1>
 
 
@@ -94,7 +91,7 @@ require '../helper/StData.php';
 
                 <tr>
                     <td>
-                        <button id="showAllDownloadObjectButton" type="button" class="btn btn-outline-dark" style="border-radius: 0; display: none" onclick="getDownloadObjectHome('<?php echo StData::$baseUrl?>',false)" >نمایش همه</button>
+                        <button id="showAllDownloadObjectButton" type="button" class="btn btn-outline-dark menuChild" style="border-radius: 0; display: none" onclick="getDownloadObjectHome('<?php echo StData::$baseUrl?>',false)" >نمایش همه</button>
                     </td>
                 </tr>
                     <?php
@@ -158,11 +155,27 @@ require '../helper/StData.php';
              
          <div class='col-lg-3 col-md-4 col-sm-6 col-xs-6 ' style='margin-top: 32px'>
             <div class='downloadObjectParent'>
+            
+                    <div class=\"col-md-6 col-lg-7 text-center text-md-right\">
+                       <a class=\"text-danger\">
+                            <i> ". $downloadObject[$i]['counter'] ."</i>
+                        </a>
+
+                       <a class=\"text-danger\">
+                            <i class=\"fas fa-download \"> </i>
+                        </a>
+                        <!-- Facebook -->
+                        <a class=\"text-primary\">
+                            <i class=\"fas fa-comments mr-4\"> </i>
+                        </a>
+                        </div>
+            <div style='padding: 8px 16px 64px;'>
             <img class=\"rounded-circle small-img\" src='" . StData::$img . $downloadObject[$i]['d_o_id'] . "d_o.jpg'  alt=" . $downloadObject[$i]['subject'] . ">
            
             <h2 class='downloadItemSubject'>" . $downloadObject[$i]['subject'] . "</h2>
             <p class='downloadItemDescription'>" . $downloadObject[$i]['small_description'] . "</p>
             <a class=\"btn btn-primary btnDownload mx-auto\" href=" . $downloadObject[$i]['down_link'] . " role=\"button\">دانلود</a>
+            </div>
         </div>
         </div><!-- /.col-lg-4 -->
              
@@ -256,8 +269,11 @@ require '../helper/StData.php';
                  >
         </div>
         <div class=\"col-md-7\">
-            <h2 class=\"featurette-heading visitItemSubject\">" . $visitObjects[$j]['subject'] . "</h2>
-            <p class=\"lead visitItemDescription\" >" . $visitObjects[$j]['small_description'] . "</p>
+            <h2 class=\"featurette-heading visitItemSubject alert alert-primary\">" . $visitObjects[$j]['subject'] . "</h2>
+            <p class=\"lead visitItemDescription alert alert-warning\" >" . $visitObjects[$j]['small_description'] . "</p>
+                                    <a class=\"text-primary \" data-toggle=\"modal\" data-target=\"#myModal\" onclick=\"getCommentForVisitObject('". StData::$baseUrl ."','" . $visitObjects[$j]['v_o_id'] . "')\">
+                            <i class=\"fas fa-comments mr-4 fa-2x\"> </i>
+                        </a>
         </div>
         
     </div>

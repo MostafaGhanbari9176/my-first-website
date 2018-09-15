@@ -1,5 +1,9 @@
 :root{
     --primaryColor : #007bff;
+    --siteBackground : #f8f9fa;
+}
+.table{
+    margin: 0;
 }
 .parent {
     direction: rtl;
@@ -38,7 +42,7 @@
 }
 
 body {
-
+    direction: ltr;
     background: transparent;
 }
 
@@ -61,3 +65,44 @@ body {
     margin: 64px 64px 0;
 }
 
+/*///////////////////////////////////  Comment   ////////////////////////////////////////*/
+.commentParent {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding: 16px 0 16px 16px;
+    margin-right: 10vw;
+}
+
+.commentSubject {
+    text-align: right;
+    font-weight: 500;
+    font-size: 1.1vw;
+    color: black;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width: fit-content;
+    padding: .6vw;
+    transition-duration: .7s;
+}
+
+.commentText {
+
+    text-align: right;
+    font-weight: 400;
+    font-size: 1vw;
+    color: black;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: .6vw;
+    transition-duration: .7s;
+}
+
+.commentImage {
+
+    width: 8vw;
+    height: 8vw;
+    position: absolute;
+    right: 0;
+    margin-top: .2vw;
+    margin-right: 2vw;
+}

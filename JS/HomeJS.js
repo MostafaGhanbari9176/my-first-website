@@ -1,3 +1,44 @@
+
+let ObjectId;
+window.onscroll = function () {
+    let elementHeight = document.getElementById('myCarousel').scrollHeight;
+    if(document.documentElement.scrollTop < elementHeight/2)
+        $('#arrowsDownHome').show(500);
+    else if(document.documentElement.scrollTop > elementHeight)
+        $('#arrowsDownHome').hide(500);
+};
+
+function slideDown() {
+    window.onscroll = null;
+    $('#arrowsDownHome').hide(500);
+    let elementHeight = document.getElementById('myCarousel').scrollHeight;
+    let bodyScroll = document.documentElement.scrollTop;
+    if(elementHeight > bodyScroll){
+        loopingArrow(elementHeight, bodyScroll);
+    }
+}
+
+function loopingArrow(elementHeight, bodyScroll){
+    setTimeout(function () {
+        if(elementHeight > bodyScroll)
+        {
+            bodyScroll += 3;
+            document.documentElement.scrollTop = bodyScroll;
+            loopingArrow(elementHeight, bodyScroll);
+        }
+        else{
+            window.onscroll = function () {
+                if(document.documentElement.scrollTop < elementHeight/2)
+                    $('#arrowsDownHome').show(500);
+                else if(document.documentElement.scrollTop > elementHeight)
+                    $('#arrowsDownHome').hide(500);
+            };
+
+        }
+
+    },1);
+}
+
 function getAllGrouping(baseAddress, downloadData) {
 
     $.ajax({
@@ -183,6 +224,26 @@ function getVisitObjectHome(downloadObjectArr, baseAddress, groupingData,firstVi
         });
     }
 }
+
+/*//////////////////////////////////////////////////////////  COMMENT SECTION  ///////////////////////////////////////////////////////////////////////*/
+
+function getCommentForVisitObject(baseAddress, objectId) {
+    ObjectId = objectId+'v_o';
+
+    $('#modalTitle').html('نظرات');
+    $.ajax({
+        type: 'GET',
+        url: baseAddress + 'getCommentByObjectId/'+ObjectId,
+        data: '',
+        success: function (data) {
+            includeComment("modal/Comment.php", "objects=" + data)
+        },
+        error: function (xhr, status, err) {
+            $("#visitObjectSection").html(getPageNF());
+        }
+    });
+}
+
 
 
 /*'<h1 style="color: tomato">😁😁😁😁😁 متعصفانه سرورمان در حال گوزیدن است لطفا بینی خودرا گرفنه و فرار کنید</h1>'*/

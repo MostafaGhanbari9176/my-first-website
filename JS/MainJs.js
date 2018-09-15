@@ -1,10 +1,12 @@
-function setErrorImage() {
 
-/*   let imgElements = document.getElementsByTagName('img');
-    for(let i=0;i<imgElements.length ;i++){
-        imgElements[i].;
-    }*/
 
+function scrollUpSite() {
+    setTimeout(function() {
+        if(document.documentElement.scrollTop > 50){
+            document.documentElement.scrollTop = (document.documentElement.scrollTop-50);
+            scrollUpSite();
+        }
+    },1);
 }
 
 function includePages(pageAddress, data) {
@@ -17,7 +19,27 @@ function includePages(pageAddress, data) {
         data: (data),
         success: function (data) {
             $("#parentCard").html(data);
-            setErrorImage();
+            /*setErrorImage();*/
+        },
+        error: function (xhr, status, err) {
+            $("#parentCard").html(getPageNF());
+
+        }
+    });
+
+}
+
+
+function includeComment(pageAddress, data) {
+
+    $.ajax({
+        type: 'POST',
+        url: pageAddress,
+
+        data: (data),
+        success: function (data) {
+            $("#modalBody").html(data);
+
         },
         error: function (xhr, status, err) {
             $("#parentCard").html(getPageNF());

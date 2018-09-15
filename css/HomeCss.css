@@ -1,5 +1,5 @@
 .homeItems {
-    padding: 64px;
+    padding: 32px 64px 64px;
     border-top: 4px solid #007bff;
     position: relative;
     top: 35vw;
@@ -84,7 +84,6 @@
     color: black;
     margin-top: 16px;
     margin-bottom: 16px;
-    background: rgba(0, 123, 255, 0.13);
     border-radius: 25px;
     width: fit-content;
     padding: .6vw;
@@ -106,8 +105,6 @@
     color: black;
     margin-top: 16px;
     margin-bottom: 16px;
-    background-color: #ffebaf;
-    border-radius: .6vw;
     width: fit-content;
     padding: .6vw;
     transition-duration: .7s;
@@ -141,7 +138,7 @@
     position: relative;
     min-height: 28vw;
     border-radius: 5px;
-    padding: 32px 16px 64px;
+    padding-top: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     background-color: white;
     height: 100%;
@@ -158,6 +155,11 @@
 
 .sliderItem {
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+.sliderText{
+    background: rgba(255,255,255,0.5);
+    color : black;
+    width: fit-content;
 }
 
 

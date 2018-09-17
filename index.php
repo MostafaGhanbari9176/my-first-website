@@ -89,7 +89,7 @@ require 'helper/StViews.php';
 </div>
 
 <!-- Footer -->
-<footer class="page-footer font-small blue-grey lighten-5" style="background: #f8f9fa ; direction: rtl;height: 40vw">
+<footer class="page-footer font-small blue-grey lighten-5" style="background: #f8f9fa ; direction: rtl;min-height: 40vw">
 
     <div style="background-color: #007bff;">
         <div class="container">

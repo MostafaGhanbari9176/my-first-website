@@ -14,15 +14,6 @@
 
 }
 
-.menuItems {
-
-}
-
-.menuChild {
-    font-size: 1.3vw;
-
-}
-
 .carousel-img {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -36,16 +27,12 @@
 }
 
 .subject {
-    font-weight: bold;
-    font-family: inherit;
     width: auto;
     background: rgba(0, 123, 255, 0.13);
-    color: black;
     border-right: 4px solid #007bff;
     border-radius: 5px;
     text-align: right;
     padding: 16px;
-    font-size: 3vw;
     transition-duration: .7s;
     animation-name: changeSubjectSize;
     animation-direction: alternate;
@@ -61,48 +48,37 @@
     width: 12vw;
     height: 12vw;
 }
-@keyframes changeSubjectSize {
-    0%{margin-left: 10px}
-    100%{margin-left: 30px}
+
+.menuItem{
+    flex: none;
+    width: auto;
+    margin: 0;
+    padding: 0;
 }
 
 .downloadItemSubject {
     text-align: center;
-    font-weight: bold;
-    font-family: inherit;
-    font-size: 1.5vw;
-    color: black;
     margin-top: 16px;
     margin-bottom: 16px;
 }
 
 .visitItemSubject {
     text-align: right;
-    font-weight: bold;
-    font-family: inherit;
-    font-size: 1.9vw;
-    color: black;
     margin-top: 16px;
     margin-bottom: 16px;
     border-radius: 25px;
     width: fit-content;
     padding: .6vw;
+    text-shadow: 7px 5px 23px black;
 }
 
 .downloadItemDescription {
-
-    font-size: 1.2vw;
-    color: black;
     margin-top: 16px;
     margin-bottom: 16px;
-    font-weight: 400;
 }
 
 .visitItemDescription {
     text-align: right;
-    font-weight: 500;
-    font-size: 1.5vw;
-    color: black;
     margin-top: 16px;
     margin-bottom: 16px;
     width: fit-content;
@@ -112,13 +88,13 @@
 }
 
 .btnDownload {
+    color: white;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     filter: grayscale(100%);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    font-size: 1.3vw;
     width: 10vw;
     margin-bottom: 16px;
     transition-duration: .3s;
@@ -162,5 +138,8 @@
     width: fit-content;
 }
 
-
+@keyframes changeSubjectSize {
+    0%{margin-left: 10px}
+    100%{margin-left: 30px}
+}
 

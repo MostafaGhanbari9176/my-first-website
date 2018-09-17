@@ -19,8 +19,11 @@ $visitObjects = json_decode($_POST['objects'], true);
                  >
         </div>
         <div class=\"col-md-7\">
-            <h2 class=\"featurette-heading visitItemSubject\">" . $visitObjects[$j]['subject'] . "</h2>
-            <p class=\"lead visitItemDescription\" >" . $visitObjects[$j]['small_description'] . "</p>
+            <h2 class=\"SUB featurette-heading visitItemSubject alert alert-primary\">" . $visitObjects[$j]['subject'] . "</h2>
+            <p class=\"DES lead visitItemDescription alert alert-warning\" >" . $visitObjects[$j]['small_description'] . "</p>
+                                                <a class=\"text-primary \" data-toggle=\"modal\" data-target=\"#myModal\" onclick=\"getCommentForVisitObject('" . StData::$baseUrl . "','" . $visitObjects[$j]['v_o_id'] . "')\">
+                            <i class=\"fas fa-comments mr-4 fa-2x\"> </i>
+                        </a>
         </div>
         
     </div>

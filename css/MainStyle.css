@@ -1,10 +1,36 @@
-:root{
-    --primaryColor : #007bff;
-    --siteBackground : #f8f9fa;
+:root {
+    --primaryColor: #007bff;
+    --siteBackground: #f8f9fa;
 }
-.table{
+
+body {
+    direction: ltr;
+    background: transparent;
+    font-family: Dirooz,serif;
+}
+
+.table {
     margin: 0;
 }
+
+.SUB {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.DES{
+    color: #1b2449;
+    font-size: 16px;
+}
+
+.SMALLTEXT{
+    color: black;
+    font-size: 12px;
+}
+
+
 .parent {
     direction: rtl;
     margin: 53px 0 0;
@@ -18,8 +44,7 @@
     height: auto;
 }
 
-.EmptyMessage{
-    font-size: 3vw;
+.EmptyMessage {
     color: tomato;
     margin: 64px auto;
     text-align: center;
@@ -35,16 +60,11 @@
 @font-face {
     font-family: 'MyWebFont';
     src: url('/helper/font/dirooz-font-v0.2.1/Dirooz.eot'); /* IE9 Compat Modes */
-    src: url('/helper/font/dirooz-font-v0.2.1/Dirooz.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('/helper/font/dirooz-font-v0.2.1/Dirooz.woff') format('woff'), /* Modern Browsers */
-    url('/helper/font/dirooz-font-v0.2.1/Dirooz.ttf')  format('truetype') /* Safari, Android, iOS */
+    src: url('/helper/font/dirooz-font-v0.2.1/Dirooz.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('/helper/font/dirooz-font-v0.2.1/Dirooz.woff') format('woff'), /* Modern Browsers */ url('/helper/font/dirooz-font-v0.2.1/Dirooz.ttf') format('truetype') /* Safari, Android, iOS */
     /*url('/helper/font/dirooz-font-v0.2.1/Dirooz.svg#svgFontName') format('svg'); */
 }
 
-body {
-    direction: ltr;
-    background: transparent;
-}
+
 
 .img-root {
 
@@ -61,7 +81,7 @@ body {
 
 }
 
-.nav-parent{
+.nav-parent {
     margin: 64px 64px 0;
 }
 
@@ -75,9 +95,6 @@ body {
 
 .commentSubject {
     text-align: right;
-    font-weight: 500;
-    font-size: 1.1vw;
-    color: black;
     margin-top: 2px;
     margin-bottom: 2px;
     width: fit-content;
@@ -88,8 +105,6 @@ body {
 .commentText {
 
     text-align: right;
-    font-weight: 400;
-    font-size: 1vw;
     color: black;
     margin-top: 2px;
     margin-bottom: 2px;

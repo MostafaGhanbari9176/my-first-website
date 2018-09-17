@@ -19,9 +19,9 @@ else {
             <div class='downloadObjectParent'>
             <img class=\"rounded-circle small-img\" src='" . StData::$img . $downloadObject[$i]['d_o_id'] . "d_o.jpg'  alt=" . $downloadObject[$i]['subject'] . ">
            
-            <h2 class='downloadItemSubject'>" . $downloadObject[$i]['subject'] . "</h2>
-            <p class='downloadItemDescription'>" . $downloadObject[$i]['small_description'] . "</p>
-            <a class=\"btn btn-primary btnDownload mx-auto\" href=" . $downloadObject[$i]['down_link'] . " role=\"button\">دانلود</a>
+            <h2 class='SUB downloadItemSubject'>" . $downloadObject[$i]['subject'] . "</h2>
+            <p class='DES downloadItemDescription'>" . $downloadObject[$i]['small_description'] . "</p>
+            <a class=\"DES btn btn-primary btnDownload mx-auto\" href=" . $downloadObject[$i]['down_link'] . " role=\"button\">دانلود</a>
         </div>
         </div><!-- /.col-lg-4 -->
              
